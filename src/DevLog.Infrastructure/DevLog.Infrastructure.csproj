@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <ProjectReference Include="..\Devlog.Domain\Devlog.Domain.csproj" />
+    <ProjectReference Include="..\DevLog.Domain\DevLog.Domain.csproj" />
   </ItemGroup>
 
   <ItemGroup>

@@ -488,56 +488,56 @@
           "Microsoft.AspNetCore.App"
         ]
       },
-      "Devlog.Application/1.0.0": {
+      "DevLog.Application/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
         "dependencies": {
-          "Devlog.Domain": "1.0.0",
-          "Devlog.Shared": "1.0.0",
+          "DevLog.Domain": "1.0.0",
+          "DevLog.Shared": "1.0.0",
           "FluentValidation": "12.1.1",
           "FluentValidation.DependencyInjectionExtensions": "12.1.1",
           "MediatR": "14.1.0"
         },
         "compile": {
-          "bin/placeholder/Devlog.Application.dll": {}
+          "bin/placeholder/DevLog.Application.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Devlog.Application.dll": {}
+          "bin/placeholder/DevLog.Application.dll": {}
         }
       },
-      "Devlog.Domain/1.0.0": {
+      "DevLog.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
         "compile": {
-          "bin/placeholder/Devlog.Domain.dll": {}
+          "bin/placeholder/DevLog.Domain.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Devlog.Domain.dll": {}
+          "bin/placeholder/DevLog.Domain.dll": {}
         }
       },
-      "Devlog.Infrastructure/1.0.0": {
+      "DevLog.Infrastructure/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
         "dependencies": {
-          "Devlog.Domain": "1.0.0",
+          "DevLog.Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore": "10.0.8",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "10.0.1"
         },
         "compile": {
-          "bin/placeholder/Devlog.Infrastructure.dll": {}
+          "bin/placeholder/DevLog.Infrastructure.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Devlog.Infrastructure.dll": {}
+          "bin/placeholder/DevLog.Infrastructure.dll": {}
         }
       },
-      "Devlog.Shared/1.0.0": {
+      "DevLog.Shared/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
         "compile": {
-          "bin/placeholder/Devlog.Shared.dll": {}
+          "bin/placeholder/DevLog.Shared.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Devlog.Shared.dll": {}
+          "bin/placeholder/DevLog.Shared.dll": {}
         }
       }
     }
@@ -1421,32 +1421,32 @@
         "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
     },
-    "Devlog.Application/1.0.0": {
+    "DevLog.Application/1.0.0": {
       "type": "project",
-      "path": "../Devlog.Application/Devlog.Application.csproj",
-      "msbuildProject": "../Devlog.Application/Devlog.Application.csproj"
+      "path": "../DevLog.Application/DevLog.Application.csproj",
+      "msbuildProject": "../DevLog.Application/DevLog.Application.csproj"
     },
-    "Devlog.Domain/1.0.0": {
+    "DevLog.Domain/1.0.0": {
       "type": "project",
-      "path": "../Devlog.Domain/Devlog.Domain.csproj",
-      "msbuildProject": "../Devlog.Domain/Devlog.Domain.csproj"
+      "path": "../Devlog.Domain/DevLog.Domain.csproj",
+      "msbuildProject": "../Devlog.Domain/DevLog.Domain.csproj"
     },
-    "Devlog.Infrastructure/1.0.0": {
+    "DevLog.Infrastructure/1.0.0": {
       "type": "project",
-      "path": "../Devlog.Infrastructure/Devlog.Infrastructure.csproj",
-      "msbuildProject": "../Devlog.Infrastructure/Devlog.Infrastructure.csproj"
+      "path": "../DevLog.Infrastructure/DevLog.Infrastructure.csproj",
+      "msbuildProject": "../DevLog.Infrastructure/DevLog.Infrastructure.csproj"
     },
-    "Devlog.Shared/1.0.0": {
+    "DevLog.Shared/1.0.0": {
       "type": "project",
-      "path": "../Devlog.Shared/Devlog.Shared.csproj",
-      "msbuildProject": "../Devlog.Shared/Devlog.Shared.csproj"
+      "path": "../DevLog.Shared/DevLog.Shared.csproj",
+      "msbuildProject": "../DevLog.Shared/DevLog.Shared.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net10.0": [
-      "Devlog.Application >= 1.0.0",
-      "Devlog.Domain >= 1.0.0",
-      "Devlog.Infrastructure >= 1.0.0",
+      "DevLog.Application >= 1.0.0",
+      "DevLog.Domain >= 1.0.0",
+      "DevLog.Infrastructure >= 1.0.0",
       "Microsoft.AspNetCore.OpenApi >= 10.0.8",
       "Serilog.AspNetCore >= 10.0.0",
       "Serilog.Sinks.Console >= 6.1.1",
@@ -1459,11 +1459,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\egemb\\DevLog\\src\\Devlog.Api\\Devlog.Api.csproj",
-      "projectName": "Devlog.Api",
-      "projectPath": "C:\\Users\\egemb\\DevLog\\src\\Devlog.Api\\Devlog.Api.csproj",
+      "projectUniqueName": "C:\\Users\\egemb\\DevLog\\src\\DevLog.Api\\DevLog.Api.csproj",
+      "projectName": "DevLog.Api",
+      "projectPath": "C:\\Users\\egemb\\DevLog\\src\\DevLog.Api\\DevLog.Api.csproj",
       "packagesPath": "C:\\Users\\egemb\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\egemb\\DevLog\\src\\Devlog.Api\\obj\\",
+      "outputPath": "C:\\Users\\egemb\\DevLog\\src\\DevLog.Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\egemb\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1480,14 +1480,14 @@
         "net10.0": {
           "targetAlias": "net10.0",
           "projectReferences": {
-            "C:\\Users\\egemb\\DevLog\\src\\Devlog.Application\\Devlog.Application.csproj": {
-              "projectPath": "C:\\Users\\egemb\\DevLog\\src\\Devlog.Application\\Devlog.Application.csproj"
+            "C:\\Users\\egemb\\DevLog\\src\\DevLog.Application\\DevLog.Application.csproj": {
+              "projectPath": "C:\\Users\\egemb\\DevLog\\src\\DevLog.Application\\DevLog.Application.csproj"
             },
-            "C:\\Users\\egemb\\DevLog\\src\\Devlog.Domain\\Devlog.Domain.csproj": {
-              "projectPath": "C:\\Users\\egemb\\DevLog\\src\\Devlog.Domain\\Devlog.Domain.csproj"
+            "C:\\Users\\egemb\\DevLog\\src\\Devlog.Domain\\DevLog.Domain.csproj": {
+              "projectPath": "C:\\Users\\egemb\\DevLog\\src\\Devlog.Domain\\DevLog.Domain.csproj"
             },
-            "C:\\Users\\egemb\\DevLog\\src\\Devlog.Infrastructure\\Devlog.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\egemb\\DevLog\\src\\Devlog.Infrastructure\\Devlog.Infrastructure.csproj"
+            "C:\\Users\\egemb\\DevLog\\src\\DevLog.Infrastructure\\DevLog.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\egemb\\DevLog\\src\\DevLog.Infrastructure\\DevLog.Infrastructure.csproj"
             }
           }
         }

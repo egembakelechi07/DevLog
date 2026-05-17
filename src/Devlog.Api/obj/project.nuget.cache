@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fkQOl5cY8qc=",
+  "dgSpecHash": "PhDA2cufK28=",
   "success": true,
-  "projectFilePath": "C:\\Users\\egemb\\DevLog\\src\\Devlog.Api\\Devlog.Api.csproj",
+  "projectFilePath": "C:\\Users\\egemb\\DevLog\\src\\DevLog.Api\\DevLog.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\egemb\\.nuget\\packages\\fluentvalidation\\12.1.1\\fluentvalidation.12.1.1.nupkg.sha512",
     "C:\\Users\\egemb\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\12.1.1\\fluentvalidation.dependencyinjectionextensions.12.1.1.nupkg.sha512",

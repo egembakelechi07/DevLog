@@ -6,15 +6,15 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v10.0": {
-      "Devlog.Infrastructure/1.0.0": {
+      "DevLog.Infrastructure/1.0.0": {
         "dependencies": {
-          "Devlog.Domain": "1.0.0",
+          "DevLog.Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore": "10.0.8",
           "Microsoft.EntityFrameworkCore.Design": "10.0.8",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "10.0.1"
         },
         "runtime": {
-          "Devlog.Infrastructure.dll": {}
+          "DevLog.Infrastructure.dll": {}
         }
       },
       "Humanizer.Core/2.14.1": {
@@ -594,9 +594,9 @@
           }
         }
       },
-      "Devlog.Domain/1.0.0": {
+      "DevLog.Domain/1.0.0": {
         "runtime": {
-          "Devlog.Domain.dll": {
+          "DevLog.Domain.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -605,7 +605,7 @@
     }
   },
   "libraries": {
-    "Devlog.Infrastructure/1.0.0": {
+    "DevLog.Infrastructure/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -841,7 +841,7 @@
       "path": "system.composition.typedparts/9.0.0",
       "hashPath": "system.composition.typedparts.9.0.0.nupkg.sha512"
     },
-    "Devlog.Domain/1.0.0": {
+    "DevLog.Domain/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

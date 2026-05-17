@@ -6,18 +6,18 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v10.0": {
-      "Devlog.Api/1.0.0": {
+      "DevLog.Api/1.0.0": {
         "dependencies": {
-          "Devlog.Application": "1.0.0",
-          "Devlog.Domain": "1.0.0",
-          "Devlog.Infrastructure": "1.0.0",
+          "DevLog.Application": "1.0.0",
+          "DevLog.Domain": "1.0.0",
+          "DevLog.Infrastructure": "1.0.0",
           "Microsoft.AspNetCore.OpenApi": "10.0.8",
           "Serilog.AspNetCore": "10.0.0",
           "Serilog.Sinks.Console": "6.1.1",
           "Swashbuckle.AspNetCore": "10.1.7"
         },
         "runtime": {
-          "Devlog.Api.dll": {}
+          "DevLog.Api.dll": {}
         }
       },
       "FluentValidation/12.1.1": {
@@ -319,45 +319,45 @@
           }
         }
       },
-      "Devlog.Application/1.0.0": {
+      "DevLog.Application/1.0.0": {
         "dependencies": {
-          "Devlog.Domain": "1.0.0",
-          "Devlog.Shared": "1.0.0",
+          "DevLog.Domain": "1.0.0",
+          "DevLog.Shared": "1.0.0",
           "FluentValidation": "12.1.1",
           "FluentValidation.DependencyInjectionExtensions": "12.1.1",
           "MediatR": "14.1.0"
         },
         "runtime": {
-          "Devlog.Application.dll": {
+          "DevLog.Application.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
         }
       },
-      "Devlog.Domain/1.0.0": {
+      "DevLog.Domain/1.0.0": {
         "runtime": {
-          "Devlog.Domain.dll": {
+          "DevLog.Domain.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
         }
       },
-      "Devlog.Infrastructure/1.0.0": {
+      "DevLog.Infrastructure/1.0.0": {
         "dependencies": {
-          "Devlog.Domain": "1.0.0",
+          "DevLog.Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore": "10.0.8",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "10.0.1"
         },
         "runtime": {
-          "Devlog.Infrastructure.dll": {
+          "DevLog.Infrastructure.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
         }
       },
-      "Devlog.Shared/1.0.0": {
+      "DevLog.Shared/1.0.0": {
         "runtime": {
-          "Devlog.Shared.dll": {
+          "DevLog.Shared.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -366,7 +366,7 @@
     }
   },
   "libraries": {
-    "Devlog.Api/1.0.0": {
+    "DevLog.Api/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -574,22 +574,22 @@
       "path": "swashbuckle.aspnetcore.swaggerui/10.1.7",
       "hashPath": "swashbuckle.aspnetcore.swaggerui.10.1.7.nupkg.sha512"
     },
-    "Devlog.Application/1.0.0": {
+    "DevLog.Application/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "Devlog.Domain/1.0.0": {
+    "DevLog.Domain/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "Devlog.Infrastructure/1.0.0": {
+    "DevLog.Infrastructure/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "Devlog.Shared/1.0.0": {
+    "DevLog.Shared/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\egemb\\DevLog\\src\\Devlog.Domain\\Devlog.Domain.csproj": {}
+    "C:\\Users\\egemb\\DevLog\\src\\Devlog.Domain\\DevLog.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\egemb\\DevLog\\src\\Devlog.Domain\\Devlog.Domain.csproj": {
+    "C:\\Users\\egemb\\DevLog\\src\\Devlog.Domain\\DevLog.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\egemb\\DevLog\\src\\Devlog.Domain\\Devlog.Domain.csproj",
-        "projectName": "Devlog.Domain",
-        "projectPath": "C:\\Users\\egemb\\DevLog\\src\\Devlog.Domain\\Devlog.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\egemb\\DevLog\\src\\Devlog.Domain\\DevLog.Domain.csproj",
+        "projectName": "DevLog.Domain",
+        "projectPath": "C:\\Users\\egemb\\DevLog\\src\\Devlog.Domain\\DevLog.Domain.csproj",
         "packagesPath": "C:\\Users\\egemb\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\egemb\\DevLog\\src\\Devlog.Domain\\obj\\",
         "projectStyle": "PackageReference",

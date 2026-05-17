@@ -6,12 +6,12 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v10.0": {
-      "Devlog.Shared/1.0.0": {
+      "DevLog.Shared/1.0.0": {
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection.Abstractions": "10.0.8"
         },
         "runtime": {
-          "Devlog.Shared.dll": {}
+          "DevLog.Shared.dll": {}
         }
       },
       "Microsoft.Extensions.DependencyInjection.Abstractions/10.0.8": {
@@ -25,7 +25,7 @@
     }
   },
   "libraries": {
-    "Devlog.Shared/1.0.0": {
+    "DevLog.Shared/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

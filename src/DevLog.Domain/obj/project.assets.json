@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\egemb\\DevLog\\src\\Devlog.Domain\\DevLog.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\egemb\\DevLog\\src\\DevLog.Domain\\DevLog.Domain.csproj",
       "projectName": "DevLog.Domain",
-      "projectPath": "C:\\Users\\egemb\\DevLog\\src\\Devlog.Domain\\DevLog.Domain.csproj",
+      "projectPath": "C:\\Users\\egemb\\DevLog\\src\\DevLog.Domain\\DevLog.Domain.csproj",
       "packagesPath": "C:\\Users\\egemb\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\egemb\\DevLog\\src\\Devlog.Domain\\obj\\",
+      "outputPath": "C:\\Users\\egemb\\DevLog\\src\\DevLog.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\egemb\\AppData\\Roaming\\NuGet\\NuGet.Config",

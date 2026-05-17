@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\egemb\\DevLog\\src\\Devlog.Shared\\Devlog.Shared.csproj": {}
+    "C:\\Users\\egemb\\DevLog\\src\\DevLog.Shared\\DevLog.Shared.csproj": {}
   },
   "projects": {
-    "C:\\Users\\egemb\\DevLog\\src\\Devlog.Shared\\Devlog.Shared.csproj": {
+    "C:\\Users\\egemb\\DevLog\\src\\DevLog.Shared\\DevLog.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\egemb\\DevLog\\src\\Devlog.Shared\\Devlog.Shared.csproj",
-        "projectName": "Devlog.Shared",
-        "projectPath": "C:\\Users\\egemb\\DevLog\\src\\Devlog.Shared\\Devlog.Shared.csproj",
+        "projectUniqueName": "C:\\Users\\egemb\\DevLog\\src\\DevLog.Shared\\DevLog.Shared.csproj",
+        "projectName": "DevLog.Shared",
+        "projectPath": "C:\\Users\\egemb\\DevLog\\src\\DevLog.Shared\\DevLog.Shared.csproj",
         "packagesPath": "C:\\Users\\egemb\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\egemb\\DevLog\\src\\Devlog.Shared\\obj\\",
+        "outputPath": "C:\\Users\\egemb\\DevLog\\src\\DevLog.Shared\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\egemb\\AppData\\Roaming\\NuGet\\NuGet.Config",

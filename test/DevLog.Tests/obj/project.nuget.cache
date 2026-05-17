@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mHtPCxQCtT8=",
+  "dgSpecHash": "GDD17IHqBiA=",
   "success": true,
-  "projectFilePath": "C:\\Users\\egemb\\DevLog\\test\\Devlog.Tests\\Devlog.Tests.csproj",
+  "projectFilePath": "C:\\Users\\egemb\\DevLog\\test\\DevLog.Tests\\DevLog.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\egemb\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
     "C:\\Users\\egemb\\.nuget\\packages\\coverlet.collector\\6.0.4\\coverlet.collector.6.0.4.nupkg.sha512",

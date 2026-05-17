@@ -6,16 +6,16 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v10.0": {
-      "Devlog.Application/1.0.0": {
+      "DevLog.Application/1.0.0": {
         "dependencies": {
-          "Devlog.Domain": "1.0.0",
-          "Devlog.Shared": "1.0.0",
+          "DevLog.Domain": "1.0.0",
+          "DevLog.Shared": "1.0.0",
           "FluentValidation": "12.1.1",
           "FluentValidation.DependencyInjectionExtensions": "12.1.1",
           "MediatR": "14.1.0"
         },
         "runtime": {
-          "Devlog.Application.dll": {}
+          "DevLog.Application.dll": {}
         }
       },
       "FluentValidation/12.1.1": {
@@ -121,20 +121,20 @@
           }
         }
       },
-      "Devlog.Domain/1.0.0": {
+      "DevLog.Domain/1.0.0": {
         "runtime": {
-          "Devlog.Domain.dll": {
+          "DevLog.Domain.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
         }
       },
-      "Devlog.Shared/1.0.0": {
+      "DevLog.Shared/1.0.0": {
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection.Abstractions": "10.0.8"
         },
         "runtime": {
-          "Devlog.Shared.dll": {
+          "DevLog.Shared.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -143,7 +143,7 @@
     }
   },
   "libraries": {
-    "Devlog.Application/1.0.0": {
+    "DevLog.Application/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -218,12 +218,12 @@
       "path": "microsoft.identitymodel.tokens/8.14.0",
       "hashPath": "microsoft.identitymodel.tokens.8.14.0.nupkg.sha512"
     },
-    "Devlog.Domain/1.0.0": {
+    "DevLog.Domain/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "Devlog.Shared/1.0.0": {
+    "DevLog.Shared/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

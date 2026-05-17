@@ -161,27 +161,27 @@
           }
         }
       },
-      "Devlog.Domain/1.0.0": {
+      "DevLog.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
         "compile": {
-          "bin/placeholder/Devlog.Domain.dll": {}
+          "bin/placeholder/DevLog.Domain.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Devlog.Domain.dll": {}
+          "bin/placeholder/DevLog.Domain.dll": {}
         }
       },
-      "Devlog.Shared/1.0.0": {
+      "DevLog.Shared/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection.Abstractions": "10.0.8"
         },
         "compile": {
-          "bin/placeholder/Devlog.Shared.dll": {}
+          "bin/placeholder/DevLog.Shared.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Devlog.Shared.dll": {}
+          "bin/placeholder/DevLog.Shared.dll": {}
         }
       }
     }
@@ -454,21 +454,21 @@
         "microsoft.identitymodel.tokens.nuspec"
       ]
     },
-    "Devlog.Domain/1.0.0": {
+    "DevLog.Domain/1.0.0": {
       "type": "project",
-      "path": "../Devlog.Domain/Devlog.Domain.csproj",
-      "msbuildProject": "../Devlog.Domain/Devlog.Domain.csproj"
+      "path": "../Devlog.Domain/DevLog.Domain.csproj",
+      "msbuildProject": "../Devlog.Domain/DevLog.Domain.csproj"
     },
-    "Devlog.Shared/1.0.0": {
+    "DevLog.Shared/1.0.0": {
       "type": "project",
-      "path": "../Devlog.Shared/Devlog.Shared.csproj",
-      "msbuildProject": "../Devlog.Shared/Devlog.Shared.csproj"
+      "path": "../DevLog.Shared/DevLog.Shared.csproj",
+      "msbuildProject": "../DevLog.Shared/DevLog.Shared.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net10.0": [
-      "Devlog.Domain >= 1.0.0",
-      "Devlog.Shared >= 1.0.0",
+      "DevLog.Domain >= 1.0.0",
+      "DevLog.Shared >= 1.0.0",
       "FluentValidation >= 12.1.1",
       "FluentValidation.DependencyInjectionExtensions >= 12.1.1",
       "MediatR >= 14.1.0"
@@ -480,11 +480,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\egemb\\DevLog\\src\\Devlog.Application\\Devlog.Application.csproj",
-      "projectName": "Devlog.Application",
-      "projectPath": "C:\\Users\\egemb\\DevLog\\src\\Devlog.Application\\Devlog.Application.csproj",
+      "projectUniqueName": "C:\\Users\\egemb\\DevLog\\src\\DevLog.Application\\DevLog.Application.csproj",
+      "projectName": "DevLog.Application",
+      "projectPath": "C:\\Users\\egemb\\DevLog\\src\\DevLog.Application\\DevLog.Application.csproj",
       "packagesPath": "C:\\Users\\egemb\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\egemb\\DevLog\\src\\Devlog.Application\\obj\\",
+      "outputPath": "C:\\Users\\egemb\\DevLog\\src\\DevLog.Application\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\egemb\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -501,11 +501,11 @@
         "net10.0": {
           "targetAlias": "net10.0",
           "projectReferences": {
-            "C:\\Users\\egemb\\DevLog\\src\\Devlog.Domain\\Devlog.Domain.csproj": {
-              "projectPath": "C:\\Users\\egemb\\DevLog\\src\\Devlog.Domain\\Devlog.Domain.csproj"
+            "C:\\Users\\egemb\\DevLog\\src\\Devlog.Domain\\DevLog.Domain.csproj": {
+              "projectPath": "C:\\Users\\egemb\\DevLog\\src\\Devlog.Domain\\DevLog.Domain.csproj"
             },
-            "C:\\Users\\egemb\\DevLog\\src\\Devlog.Shared\\Devlog.Shared.csproj": {
-              "projectPath": "C:\\Users\\egemb\\DevLog\\src\\Devlog.Shared\\Devlog.Shared.csproj"
+            "C:\\Users\\egemb\\DevLog\\src\\DevLog.Shared\\DevLog.Shared.csproj": {
+              "projectPath": "C:\\Users\\egemb\\DevLog\\src\\DevLog.Shared\\DevLog.Shared.csproj"
             }
           }
         }

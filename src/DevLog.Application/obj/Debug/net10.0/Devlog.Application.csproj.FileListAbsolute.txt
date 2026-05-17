@@ -1,0 +1,17 @@
+C:\Users\egemb\DevLog\src\Devlog.Application\bin\Debug\net10.0\Devlog.Application.deps.json
+C:\Users\egemb\DevLog\src\Devlog.Application\bin\Debug\net10.0\Devlog.Application.dll
+C:\Users\egemb\DevLog\src\Devlog.Application\bin\Debug\net10.0\Devlog.Application.pdb
+C:\Users\egemb\DevLog\src\Devlog.Application\bin\Debug\net10.0\DevLog.Domain.dll
+C:\Users\egemb\DevLog\src\Devlog.Application\bin\Debug\net10.0\Devlog.Shared.dll
+C:\Users\egemb\DevLog\src\Devlog.Application\bin\Debug\net10.0\Devlog.Shared.pdb
+C:\Users\egemb\DevLog\src\Devlog.Application\bin\Debug\net10.0\DevLog.Domain.pdb
+C:\Users\egemb\DevLog\src\Devlog.Application\obj\Debug\net10.0\Devlog.Application.csproj.AssemblyReference.cache
+C:\Users\egemb\DevLog\src\Devlog.Application\obj\Debug\net10.0\Devlog.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\egemb\DevLog\src\Devlog.Application\obj\Debug\net10.0\Devlog.Application.AssemblyInfoInputs.cache
+C:\Users\egemb\DevLog\src\Devlog.Application\obj\Debug\net10.0\Devlog.Application.AssemblyInfo.cs
+C:\Users\egemb\DevLog\src\Devlog.Application\obj\Debug\net10.0\Devlog.Application.csproj.CoreCompileInputs.cache
+C:\Users\egemb\DevLog\src\Devlog.Application\obj\Debug\net10.0\Devlog.A.020CCADF.Up2Date
+C:\Users\egemb\DevLog\src\Devlog.Application\obj\Debug\net10.0\Devlog.Application.dll
+C:\Users\egemb\DevLog\src\Devlog.Application\obj\Debug\net10.0\refint\Devlog.Application.dll
+C:\Users\egemb\DevLog\src\Devlog.Application\obj\Debug\net10.0\Devlog.Application.pdb
+C:\Users\egemb\DevLog\src\Devlog.Application\obj\Debug\net10.0\ref\Devlog.Application.dll

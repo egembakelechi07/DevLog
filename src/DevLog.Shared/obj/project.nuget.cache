@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "FzkQr2M9glw=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\egemb\\DevLog\\src\\Devlog.Shared\\Devlog.Shared.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\egemb\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\10.0.8\\microsoft.extensions.dependencyinjection.abstractions.10.0.8.nupkg.sha512"
+  ],
+  "logs": []
+}

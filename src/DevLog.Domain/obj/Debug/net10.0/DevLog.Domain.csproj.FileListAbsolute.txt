@@ -10,3 +10,15 @@ C:\Users\egemb\DevLog\src\DevLog.Domain\obj\Debug\net10.0\refint\DevLog.Domain.d
 C:\Users\egemb\DevLog\src\DevLog.Domain\obj\Debug\net10.0\DevLog.Domain.pdb
 C:\Users\egemb\DevLog\src\DevLog.Domain\obj\Debug\net10.0\ref\DevLog.Domain.dll
 C:\Users\egemb\DevLog\src\DevLog.Domain\obj\Debug\net10.0\DevLog.Domain.sourcelink.json
+C:\Users\SOCIAL MEDIA MGT\DevLog\src\DevLog.Domain\bin\Debug\net10.0\DevLog.Domain.deps.json
+C:\Users\SOCIAL MEDIA MGT\DevLog\src\DevLog.Domain\bin\Debug\net10.0\DevLog.Domain.dll
+C:\Users\SOCIAL MEDIA MGT\DevLog\src\DevLog.Domain\bin\Debug\net10.0\DevLog.Domain.pdb
+C:\Users\SOCIAL MEDIA MGT\DevLog\src\DevLog.Domain\obj\Debug\net10.0\DevLog.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\SOCIAL MEDIA MGT\DevLog\src\DevLog.Domain\obj\Debug\net10.0\DevLog.Domain.AssemblyInfoInputs.cache
+C:\Users\SOCIAL MEDIA MGT\DevLog\src\DevLog.Domain\obj\Debug\net10.0\DevLog.Domain.AssemblyInfo.cs
+C:\Users\SOCIAL MEDIA MGT\DevLog\src\DevLog.Domain\obj\Debug\net10.0\DevLog.Domain.csproj.CoreCompileInputs.cache
+C:\Users\SOCIAL MEDIA MGT\DevLog\src\DevLog.Domain\obj\Debug\net10.0\DevLog.Domain.sourcelink.json
+C:\Users\SOCIAL MEDIA MGT\DevLog\src\DevLog.Domain\obj\Debug\net10.0\DevLog.Domain.dll
+C:\Users\SOCIAL MEDIA MGT\DevLog\src\DevLog.Domain\obj\Debug\net10.0\refint\DevLog.Domain.dll
+C:\Users\SOCIAL MEDIA MGT\DevLog\src\DevLog.Domain\obj\Debug\net10.0\DevLog.Domain.pdb
+C:\Users\SOCIAL MEDIA MGT\DevLog\src\DevLog.Domain\obj\Debug\net10.0\ref\DevLog.Domain.dll

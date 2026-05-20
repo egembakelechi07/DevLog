@@ -9,6 +9,7 @@ public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options
     public DbSet<Log> Logs {get; set;}
     public DbSet<User> Users {get; set;}
     public DbSet<Tag> Tags {get; set;}
+    public DbSet<LogTags> LogTags {get; set;}
 
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)

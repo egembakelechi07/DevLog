@@ -9,34 +9,46 @@ public class LogConfiguration : IEntityTypeConfiguration<Log>
 {
     public void Configure(EntityTypeBuilder<Log> builder)
     {
-        builder.HasKey(x => x.Id);
+        builder.HasKey(l => l.Id);
 
-        builder.Property(x => x.Title)
-            .IsRequired()
-            .HasMaxLength(200);
+        builder.Property(l => l.Title)
+               .IsRequired()
+               .HasMaxLength(200);
 
-        builder.Property(x => x.Description)
-            .IsRequired()
-            .HasMaxLength(2000);
+        builder.Property(l => l.Description)
+               .IsRequired()
+               .HasMaxLength(2000);
 
-        builder.Property(x => x.Category)
-            .IsRequired()
-            .HasConversion<string>();
+        builder.Property(l => l.Category)
+               .IsRequired()
+               .HasConversion<string>();
 
-        builder.Property(x => x.Status)
-            .IsRequired()
-            .HasConversion<string>();
+        builder.Property(l => l.Status)
+               .IsRequired()
+               .HasConversion<string>();
 
-        builder.Property(x => x.CreatedAt)
-            .IsRequired();
+        builder.Property(l => l.UserId)
+               .IsRequired();
 
-        builder.Property(x => x.LastUpdatedAt)
-            .IsRequired();
+        builder.Property(l => l.CreatedAt)
+               .IsRequired();
 
-        builder.HasOne(x => x.User)
-            .WithMany(x => x.Logs)
-            .HasForeignKey(x => x.UserId)
-            .OnDelete(DeleteBehavior.Cascade);
+        builder.Property(l => l.LastUpdatedAt)
+               .IsRequired();
+
+        // RELATIONSHIPS
+        // Log belongs to one User
+        // Already configured in UserConfiguration
+        // No need to repeat — EF reads from both sides
+
+        // INDEXES
+        builder.HasIndex(l => l.UserId);
+
+        builder.HasIndex(l => l.Category);
+
+        builder.HasIndex(l => l.Status);
+
+        builder.HasIndex(l => l.CreatedAt);
 
     }
 }

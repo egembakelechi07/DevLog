@@ -16,3 +16,21 @@ C:\Users\egemb\DevLog\src\DevLog.Infrastructure\bin\Debug\net10.0\DevLog.Infrast
 C:\Users\egemb\DevLog\src\DevLog.Infrastructure\obj\Debug\net10.0\DevLog.Infrastructure.genruntimeconfig.cache
 C:\Users\egemb\DevLog\src\DevLog.Infrastructure\obj\Debug\net10.0\DevLog.Infrastructure.sourcelink.json
 C:\Users\egemb\DevLog\src\DevLog.Infrastructure\obj\Debug\net10.0\DevLog.I.DF686ECC.Up2Date
+C:\Users\SOCIAL MEDIA MGT\DevLog\src\DevLog.Infrastructure\bin\Debug\net10.0\DevLog.Infrastructure.deps.json
+C:\Users\SOCIAL MEDIA MGT\DevLog\src\DevLog.Infrastructure\bin\Debug\net10.0\DevLog.Infrastructure.runtimeconfig.json
+C:\Users\SOCIAL MEDIA MGT\DevLog\src\DevLog.Infrastructure\bin\Debug\net10.0\DevLog.Infrastructure.dll
+C:\Users\SOCIAL MEDIA MGT\DevLog\src\DevLog.Infrastructure\bin\Debug\net10.0\DevLog.Infrastructure.pdb
+C:\Users\SOCIAL MEDIA MGT\DevLog\src\DevLog.Infrastructure\bin\Debug\net10.0\DevLog.Domain.dll
+C:\Users\SOCIAL MEDIA MGT\DevLog\src\DevLog.Infrastructure\bin\Debug\net10.0\DevLog.Domain.pdb
+C:\Users\SOCIAL MEDIA MGT\DevLog\src\DevLog.Infrastructure\obj\Debug\net10.0\DevLog.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\SOCIAL MEDIA MGT\DevLog\src\DevLog.Infrastructure\obj\Debug\net10.0\DevLog.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\SOCIAL MEDIA MGT\DevLog\src\DevLog.Infrastructure\obj\Debug\net10.0\DevLog.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\SOCIAL MEDIA MGT\DevLog\src\DevLog.Infrastructure\obj\Debug\net10.0\DevLog.Infrastructure.AssemblyInfo.cs
+C:\Users\SOCIAL MEDIA MGT\DevLog\src\DevLog.Infrastructure\obj\Debug\net10.0\DevLog.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\SOCIAL MEDIA MGT\DevLog\src\DevLog.Infrastructure\obj\Debug\net10.0\DevLog.Infrastructure.sourcelink.json
+C:\Users\SOCIAL MEDIA MGT\DevLog\src\DevLog.Infrastructure\obj\Debug\net10.0\DevLog.I.DF686ECC.Up2Date
+C:\Users\SOCIAL MEDIA MGT\DevLog\src\DevLog.Infrastructure\obj\Debug\net10.0\DevLog.Infrastructure.dll
+C:\Users\SOCIAL MEDIA MGT\DevLog\src\DevLog.Infrastructure\obj\Debug\net10.0\refint\DevLog.Infrastructure.dll
+C:\Users\SOCIAL MEDIA MGT\DevLog\src\DevLog.Infrastructure\obj\Debug\net10.0\DevLog.Infrastructure.pdb
+C:\Users\SOCIAL MEDIA MGT\DevLog\src\DevLog.Infrastructure\obj\Debug\net10.0\DevLog.Infrastructure.genruntimeconfig.cache
+C:\Users\SOCIAL MEDIA MGT\DevLog\src\DevLog.Infrastructure\obj\Debug\net10.0\ref\DevLog.Infrastructure.dll

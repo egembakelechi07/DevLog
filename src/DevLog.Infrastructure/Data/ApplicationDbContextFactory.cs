@@ -10,7 +10,7 @@ public class ApplicationDbContextFactory : IDesignTimeDbContextFactory<Applicati
     {
         //Build Configuration
         var configuration = new ConfigurationBuilder()
-            .SetBasePath(Directory.GetCurrentDirectory())
+            .SetBasePath(Path.Combine(Directory.GetCurrentDirectory(), "../DevLog.Api"))
             .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
             .AddJsonFile("appsettings.Development.json", optional: true, reloadOnChange: true)
             // .AddJsonFile("appsettings.Docker.json", optional: true, reloadOnChange: true)

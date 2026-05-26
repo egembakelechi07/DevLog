@@ -1,6 +1,6 @@
 using DevLog.Domain.Entities;
 
-namespace DevLog.Application.Interfaces;
+namespace DevLog.Domain.Interfaces;
 
 public interface IUserRepository
 {

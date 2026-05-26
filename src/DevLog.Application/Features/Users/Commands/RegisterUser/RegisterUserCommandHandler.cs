@@ -1,7 +1,7 @@
-using System.Runtime.CompilerServices;
 using DevLog.Application.DTOs;
 using DevLog.Application.Features.Users.Commands.RegisterUser;
-using DevLog.Application.Interfaces;
+using DevLog.Domain.Interfaces;
+using DevLog.Domain.Entities;
 using MediatR;
 
 public class RegisterUserCommandHandler : IRequestHandler<RegisterUserCommand, UserDto>
@@ -18,7 +18,7 @@ public class RegisterUserCommandHandler : IRequestHandler<RegisterUserCommand, U
         
         if(exists) 
         throw new InvalidOperationException("A User With Email Address already exists.");
-        
+
         if(string.IsNullOrWhiteSpace(request.Name))
         throw new InvalidOperationException("Name Field Cannot be Empty");
         if(string.IsNullOrWhiteSpace(request.Email))
@@ -31,10 +31,25 @@ public class RegisterUserCommandHandler : IRequestHandler<RegisterUserCommand, U
         if(request.Password != request.ConfirmPassword)
         throw new InvalidOperationException("Password and ConfirmPassword don't match");
 
+                // Hash the password before storing
+        var passwordHash = BCrypt.Net.BCrypt.HashPassword(request.Password);
+
+        var user = new User
+        {
+            Name = request.Name,
+            Email = request.Email,
+            PasswordHash = passwordHash
+        };
+
+        var created = await _repository.CreateAsync(user);
 
         return new UserDto
         {
-            
+            Id = created.Id,
+            Name = created.Name,
+            Email = created.Email,
+            CreatedAt = created.CreatedAt,
+            LastUpdatedAt = created.LastUpdatedAt
         };
     }
 }

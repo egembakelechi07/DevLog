@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\SOCIAL MEDIA MGT\\DevLog\\test\\DevLog.Tests\\DevLog.Tests.csproj": {}
+    "C:\\Users\\egemb\\DevLog\\test\\DevLog.Tests\\DevLog.Tests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\SOCIAL MEDIA MGT\\DevLog\\src\\DevLog.Application\\DevLog.Application.csproj": {
+    "C:\\Users\\egemb\\DevLog\\src\\DevLog.Application\\DevLog.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\SOCIAL MEDIA MGT\\DevLog\\src\\DevLog.Application\\DevLog.Application.csproj",
+        "projectUniqueName": "C:\\Users\\egemb\\DevLog\\src\\DevLog.Application\\DevLog.Application.csproj",
         "projectName": "DevLog.Application",
-        "projectPath": "C:\\Users\\SOCIAL MEDIA MGT\\DevLog\\src\\DevLog.Application\\DevLog.Application.csproj",
-        "packagesPath": "C:\\Users\\SOCIAL MEDIA MGT\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\SOCIAL MEDIA MGT\\DevLog\\src\\DevLog.Application\\obj\\",
+        "projectPath": "C:\\Users\\egemb\\DevLog\\src\\DevLog.Application\\DevLog.Application.csproj",
+        "packagesPath": "C:\\Users\\egemb\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\egemb\\DevLog\\src\\DevLog.Application\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\SOCIAL MEDIA MGT\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\egemb\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -32,11 +28,11 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\SOCIAL MEDIA MGT\\DevLog\\src\\DevLog.Domain\\DevLog.Domain.csproj": {
-                "projectPath": "C:\\Users\\SOCIAL MEDIA MGT\\DevLog\\src\\DevLog.Domain\\DevLog.Domain.csproj"
+              "C:\\Users\\egemb\\DevLog\\src\\DevLog.Domain\\DevLog.Domain.csproj": {
+                "projectPath": "C:\\Users\\egemb\\DevLog\\src\\DevLog.Domain\\DevLog.Domain.csproj"
               },
-              "C:\\Users\\SOCIAL MEDIA MGT\\DevLog\\src\\DevLog.Shared\\DevLog.Shared.csproj": {
-                "projectPath": "C:\\Users\\SOCIAL MEDIA MGT\\DevLog\\src\\DevLog.Shared\\DevLog.Shared.csproj"
+              "C:\\Users\\egemb\\DevLog\\src\\DevLog.Shared\\DevLog.Shared.csproj": {
+                "projectPath": "C:\\Users\\egemb\\DevLog\\src\\DevLog.Shared\\DevLog.Shared.csproj"
               }
             }
           }
@@ -86,7 +82,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -364,21 +360,17 @@
         }
       }
     },
-    "C:\\Users\\SOCIAL MEDIA MGT\\DevLog\\src\\DevLog.Domain\\DevLog.Domain.csproj": {
+    "C:\\Users\\egemb\\DevLog\\src\\DevLog.Domain\\DevLog.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\SOCIAL MEDIA MGT\\DevLog\\src\\DevLog.Domain\\DevLog.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\egemb\\DevLog\\src\\DevLog.Domain\\DevLog.Domain.csproj",
         "projectName": "DevLog.Domain",
-        "projectPath": "C:\\Users\\SOCIAL MEDIA MGT\\DevLog\\src\\DevLog.Domain\\DevLog.Domain.csproj",
-        "packagesPath": "C:\\Users\\SOCIAL MEDIA MGT\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\SOCIAL MEDIA MGT\\DevLog\\src\\DevLog.Domain\\obj\\",
+        "projectPath": "C:\\Users\\egemb\\DevLog\\src\\DevLog.Domain\\DevLog.Domain.csproj",
+        "packagesPath": "C:\\Users\\egemb\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\egemb\\DevLog\\src\\DevLog.Domain\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\SOCIAL MEDIA MGT\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\egemb\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -425,7 +417,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -703,21 +695,17 @@
         }
       }
     },
-    "C:\\Users\\SOCIAL MEDIA MGT\\DevLog\\src\\DevLog.Shared\\DevLog.Shared.csproj": {
+    "C:\\Users\\egemb\\DevLog\\src\\DevLog.Shared\\DevLog.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\SOCIAL MEDIA MGT\\DevLog\\src\\DevLog.Shared\\DevLog.Shared.csproj",
+        "projectUniqueName": "C:\\Users\\egemb\\DevLog\\src\\DevLog.Shared\\DevLog.Shared.csproj",
         "projectName": "DevLog.Shared",
-        "projectPath": "C:\\Users\\SOCIAL MEDIA MGT\\DevLog\\src\\DevLog.Shared\\DevLog.Shared.csproj",
-        "packagesPath": "C:\\Users\\SOCIAL MEDIA MGT\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\SOCIAL MEDIA MGT\\DevLog\\src\\DevLog.Shared\\obj\\",
+        "projectPath": "C:\\Users\\egemb\\DevLog\\src\\DevLog.Shared\\DevLog.Shared.csproj",
+        "packagesPath": "C:\\Users\\egemb\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\egemb\\DevLog\\src\\DevLog.Shared\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\SOCIAL MEDIA MGT\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\egemb\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -770,7 +758,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -1048,21 +1036,17 @@
         }
       }
     },
-    "C:\\Users\\SOCIAL MEDIA MGT\\DevLog\\test\\DevLog.Tests\\DevLog.Tests.csproj": {
+    "C:\\Users\\egemb\\DevLog\\test\\DevLog.Tests\\DevLog.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\SOCIAL MEDIA MGT\\DevLog\\test\\DevLog.Tests\\DevLog.Tests.csproj",
+        "projectUniqueName": "C:\\Users\\egemb\\DevLog\\test\\DevLog.Tests\\DevLog.Tests.csproj",
         "projectName": "DevLog.Tests",
-        "projectPath": "C:\\Users\\SOCIAL MEDIA MGT\\DevLog\\test\\DevLog.Tests\\DevLog.Tests.csproj",
-        "packagesPath": "C:\\Users\\SOCIAL MEDIA MGT\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\SOCIAL MEDIA MGT\\DevLog\\test\\DevLog.Tests\\obj\\",
+        "projectPath": "C:\\Users\\egemb\\DevLog\\test\\DevLog.Tests\\DevLog.Tests.csproj",
+        "packagesPath": "C:\\Users\\egemb\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\egemb\\DevLog\\test\\DevLog.Tests\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\SOCIAL MEDIA MGT\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\egemb\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -1076,8 +1060,8 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\SOCIAL MEDIA MGT\\DevLog\\src\\DevLog.Application\\DevLog.Application.csproj": {
-                "projectPath": "C:\\Users\\SOCIAL MEDIA MGT\\DevLog\\src\\DevLog.Application\\DevLog.Application.csproj"
+              "C:\\Users\\egemb\\DevLog\\src\\DevLog.Application\\DevLog.Application.csproj": {
+                "projectPath": "C:\\Users\\egemb\\DevLog\\src\\DevLog.Application\\DevLog.Application.csproj"
               }
             }
           }
@@ -1141,7 +1125,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",

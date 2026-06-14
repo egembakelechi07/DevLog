@@ -3,8 +3,9 @@ using DevLog.Application.Features.Users.Commands.RegisterUser;
 using DevLog.Domain.Interfaces;
 using DevLog.Domain.Entities;
 using MediatR;
+using DevLog.Shared;
 
-public class RegisterUserCommandHandler : IRequestHandler<RegisterUserCommand, UserDto>
+public class RegisterUserCommandHandler : IRequestHandler<RegisterUserCommand, Result<UserDto>>
 {
     private readonly IUserRepository _repository;
     public RegisterUserCommandHandler( IUserRepository repository)
@@ -12,44 +13,67 @@ public class RegisterUserCommandHandler : IRequestHandler<RegisterUserCommand, U
         _repository = repository;
     }
 
-    public async Task<UserDto> Handle(RegisterUserCommand request, CancellationToken cancellationToken)
+    public async Task<Result<UserDto>> Handle(RegisterUserCommand request, CancellationToken cancellationToken)
     {
-        var exists = await _repository.ExistsAsync(request.Email);
+        var errors = new List<string>();
+
+        if (string.IsNullOrWhiteSpace(request.Name))
+        errors.Add("Name field cannot be empty");
         
-        if(exists) 
-        throw new InvalidOperationException("A User With Email Address already exists.");
+        var NormalizedEmail = request.Email.Trim().ToLower();
 
-        if(string.IsNullOrWhiteSpace(request.Name))
-        throw new InvalidOperationException("Name Field Cannot be Empty");
-        if(string.IsNullOrWhiteSpace(request.Email))
-        throw new InvalidOperationException("Email Field Cannot be Empty");
-        if(string.IsNullOrWhiteSpace(request.Password))
-        throw new InvalidOperationException("Password Field Cannot be Empty");
-        if(string.IsNullOrWhiteSpace(request.ConfirmPassword))
-        throw new InvalidOperationException("ConfirmPassword Field Cannot be Empty");
+        if (string.IsNullOrWhiteSpace(NormalizedEmail))
+        errors.Add("Email field cannot be empty");
 
-        if(request.Password != request.ConfirmPassword)
-        throw new InvalidOperationException("Password and ConfirmPassword don't match");
+        if (string.IsNullOrWhiteSpace(request.Password))
+        errors.Add("Password field cannot be empty");
 
-                // Hash the password before storing
-        var passwordHash = BCrypt.Net.BCrypt.HashPassword(request.Password);
+        if (string.IsNullOrWhiteSpace(request.ConfirmPassword))
+        errors.Add("Confirm Password field cannot be empty");
+
+        if (request.Password != request.ConfirmPassword)
+        errors.Add("Password and Confirm Password do not match");
+
+        if(!IsValidPassword(request.Password))
+        errors.Add("Password must be at least 8 characters and contain at least one number and special character");
+
+        var exists = await _repository.ExistsAsync(request.Email);
+        if (exists)
+        errors.Add("User With this email already exists");
+
+        if(errors.Any())
+        return Result<UserDto>.Fail(errors);
 
         var user = new User
         {
             Name = request.Name,
             Email = request.Email,
-            PasswordHash = passwordHash
+            PasswordHash = request.Password
         };
 
         var created = await _repository.CreateAsync(user);
 
-        return new UserDto
+        return Result<UserDto>.Success(new UserDto
         {
             Id = created.Id,
             Name = created.Name,
             Email = created.Email,
             CreatedAt = created.CreatedAt,
             LastUpdatedAt = created.LastUpdatedAt
-        };
+        }); 
+    }
+
+    private static bool IsValidPassword(string password)
+    {
+        if(password.Length < 8 )
+        return false;
+
+        bool hasUppercase = password.Any(char.IsUpper);
+        bool hasLowercase = password.Any(char.IsLower);
+        bool hasDigit = password.Any(char.IsDigit);
+        bool hasSpecialChar = password.Any(ch => !char.IsLetterOrDigit(ch));
+
+        return hasUppercase && hasLowercase && hasDigit && hasSpecialChar;
+
     }
 }

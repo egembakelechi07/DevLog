@@ -30,8 +30,7 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
         builder.Property(u => u.CreatedAt)
                .IsRequired();
 
-        builder.Property(u => u.LastUpdatedAt)
-               .IsRequired();
+        builder.Property(u => u.LastUpdatedAt);
 
         // ── RELATIONSHIPS ─────────────────────────────────────
         // One User has many Logs

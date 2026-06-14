@@ -34,8 +34,40 @@ public class UserRepository : IUserRepository
 
     public async Task<User> CreateAsync(User user)
     {
+        user.PasswordHash = BCrypt.Net.BCrypt.HashPassword(user.PasswordHash);
         _context.Users.Add(user);
         await _context.SaveChangesAsync();
         return user;
+    }
+
+    public async Task<User> UpdateRefreshTokenAsync(Guid userId, string refreshToken, DateTime expiresAt)
+    {
+        var user = await _context.Users.FindAsync(userId);
+        user!.RefreshToken = refreshToken;
+        user.RefreshTokenExpiresAt = expiresAt;
+        user!.LastUpdatedAt = DateTime.UtcNow;
+
+        await _context.SaveChangesAsync();
+        return user;
+    }
+
+    public bool IsValidPassword(string password, string PasswordHash)
+    {
+        return BCrypt.Net.BCrypt.Verify(password, PasswordHash);
+    
+    }
+
+    public async Task LogoutAsync(Guid userId)
+    {
+        var user = await _context.Users.FindAsync(userId);
+
+        if(user == null)
+        return;
+
+        user.RefreshToken = null;
+        user.RefreshTokenExpiresAt = null;
+        user.LastUpdatedAt = DateTime.UtcNow;
+
+       await _context.SaveChangesAsync();
     }
 }

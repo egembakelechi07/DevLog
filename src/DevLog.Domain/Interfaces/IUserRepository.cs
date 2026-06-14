@@ -9,4 +9,7 @@ public interface IUserRepository
     Task<User?> GetByIdAsync(Guid id);
     Task<bool> ExistsAsync(string email);
     Task<User> CreateAsync(User user);
+    Task<User> UpdateRefreshTokenAsync(Guid userId, string refreshToken, DateTime expiresAt);
+    bool IsValidPassword(string password, string PasswordHash);
+    Task LogoutAsync(Guid userId);
 }

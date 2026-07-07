@@ -1,0 +1,13 @@
+C:\Users\egemb\DevLog\src\DevLog.Shared\bin\Debug\net9.0\DevLog.Shared.deps.json
+C:\Users\egemb\DevLog\src\DevLog.Shared\bin\Debug\net9.0\DevLog.Shared.dll
+C:\Users\egemb\DevLog\src\DevLog.Shared\bin\Debug\net9.0\DevLog.Shared.pdb
+C:\Users\egemb\DevLog\src\DevLog.Shared\obj\Debug\net9.0\DevLog.Shared.csproj.AssemblyReference.cache
+C:\Users\egemb\DevLog\src\DevLog.Shared\obj\Debug\net9.0\DevLog.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\egemb\DevLog\src\DevLog.Shared\obj\Debug\net9.0\DevLog.Shared.AssemblyInfoInputs.cache
+C:\Users\egemb\DevLog\src\DevLog.Shared\obj\Debug\net9.0\DevLog.Shared.AssemblyInfo.cs
+C:\Users\egemb\DevLog\src\DevLog.Shared\obj\Debug\net9.0\DevLog.Shared.csproj.CoreCompileInputs.cache
+C:\Users\egemb\DevLog\src\DevLog.Shared\obj\Debug\net9.0\DevLog.Shared.sourcelink.json
+C:\Users\egemb\DevLog\src\DevLog.Shared\obj\Debug\net9.0\DevLog.Shared.dll
+C:\Users\egemb\DevLog\src\DevLog.Shared\obj\Debug\net9.0\refint\DevLog.Shared.dll
+C:\Users\egemb\DevLog\src\DevLog.Shared\obj\Debug\net9.0\DevLog.Shared.pdb
+C:\Users\egemb\DevLog\src\DevLog.Shared\obj\Debug\net9.0\ref\DevLog.Shared.dll

@@ -14,29 +14,29 @@ public class UserRepository : IUserRepository
         _context = context;
     }
 
-    public async Task<User?> GetByEmailAsync(string email)
+    public async Task<User?> GetByEmailAsync(string email, CancellationToken cancellationToken)
     {
         return await _context.Users
-            .FirstOrDefaultAsync(u => u.Email == email);
+            .FirstOrDefaultAsync(u => u.Email == email, cancellationToken);
     }
 
-    public async Task<User?> GetByIdAsync(Guid id)
+    public async Task<User?> GetByIdAsync(Guid id, CancellationToken cancellationToken= default)
     {
         return await _context.Users
-            .FirstOrDefaultAsync(u => u.Id == id);
+            .FirstOrDefaultAsync(u => u.Id == id, cancellationToken);
     }
 
-    public async Task<bool> ExistsAsync(string email)
+    public async Task<bool> ExistsAsync(string email, CancellationToken cancellationToken = default)
     {
         return await _context.Users
-            .AnyAsync(u => u.Email == email);
+            .AnyAsync(u => u.Email == email, cancellationToken );
     }
 
-    public async Task<User> CreateAsync(User user)
+    public async Task<User> CreateAsync(User user, CancellationToken cancellationToken = default)
     {
         user.PasswordHash = BCrypt.Net.BCrypt.HashPassword(user.PasswordHash);
-        _context.Users.Add(user);
-        await _context.SaveChangesAsync();
+        await _context.Users.AddAsync(user, cancellationToken);
+        await _context.SaveChangesAsync(cancellationToken);
         return user;
     }
 
@@ -57,9 +57,9 @@ public class UserRepository : IUserRepository
     
     }
 
-    public async Task LogoutAsync(Guid userId)
+    public async Task LogoutAsync(Guid userId, CancellationToken cancellationToken)
     {
-        var user = await _context.Users.FindAsync(userId);
+        var user = await _context.Users.FindAsync(userId, cancellationToken);
 
         if(user == null)
         return;
@@ -68,6 +68,6 @@ public class UserRepository : IUserRepository
         user.RefreshTokenExpiresAt = null;
         user.LastUpdatedAt = DateTime.UtcNow;
 
-       await _context.SaveChangesAsync();
+       await _context.SaveChangesAsync(cancellationToken);
     }
 }

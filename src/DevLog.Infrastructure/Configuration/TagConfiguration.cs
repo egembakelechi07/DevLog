@@ -13,7 +13,7 @@ public class TagConfiguration : IEntityTypeConfiguration<Tag>
         builder.Property(t => t.Name)
                .IsRequired()
                .HasMaxLength(50);
-
+               
         builder.HasIndex(t => t.Name)
                .IsUnique();
 

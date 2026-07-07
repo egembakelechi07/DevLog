@@ -6,7 +6,7 @@ using DevLog.Infrastructure.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
-using Microsoft.OpenApi;
+using Microsoft.OpenApi.Models;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -52,55 +52,60 @@ builder.Services.AddAuthentication(options =>
 builder.Services.AddAuthorization();
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen(c => 
-c.SwaggerDoc("v1",new OpenApiInfo
+builder.Services.AddSwaggerGen(c =>
 {
-    Title = "DevLog Api",
-    Version = "v1",
-    Description = @"RESTful API for managing logging and tracking developer activities
-    **Authntication**
-    1.Register with POST api/auth/Register
-    2.Login using POST api/auth/Login
-    3.Copy 'accessToken' from response
-    4.Click on authorize and paste the token
-    5.All subsequent request will include the bearer token automatically.",
-    Contact = new OpenApiContact
+    c.SwaggerDoc("v1", new OpenApiInfo
     {
-        Name = "DevLog Support",
-        Email = "support@DevLog.com
-    }
-},
-c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
-{
-    Name = "Authorization",
-    Type = SecuritySchemeType.Http,
-    Scheme = "Bearer",
-    In = ParameterLocation.Header,
-    Description = @"Enter the JWT token from POST api/auth/Login
-    **How To Get Token**
-    1. Use POST api/auth/register to create an account
-    2. Use POST api/auth/login with your credentials
-    3. Copy the 'accessToken from the response 
-    4. Click 'authorize' and paste the token from the response 
-    5. Click 'Authorize'."
-}),
-c.AddSecurityRequirement(new OpenApiSecurityRequirement
-{
-    {
-        new OpenApiSecurityScheme
+      Title = "DevLog API",
+      Version = "v1",
+      Description = @"RESTful API for managing logging and tracking developer activities.
+
+**Authentication**
+1. Register with POST /api/auth/register
+2. Login using POST /api/auth/login
+3. Copy the 'accessToken' from the response
+4. Click 'Authorize' and paste the token
+5. All subsequent requests will include the bearer token automatically.",
+        Contact = new OpenApiContact
         {
-            Reference = new OpenApiReferenceError
+            Name = "DevLog Support",
+            Email = "support@devlog.com"
+        }
+    });
+    c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+    {
+        Name = "Authorization",
+        Type = SecuritySchemeType.Http,
+        Scheme = "bearer",
+        BearerFormat = "JWT",
+        In = ParameterLocation.Header,
+        Description = @"Enter the JWT token obtained from POST /api/auth/login.
+
+**How to Get a Token**
+1. Use POST /api/auth/register to create an account
+2. Use POST /api/auth/login with your credentials
+3. Copy the 'accessToken' from the response
+4. Click 'Authorize' and paste the token
+5. Click 'Authorize' to save it"
+    });
+    c.AddSecurityRequirement( new OpenApiSecurityRequirement
+    {
+        {
+            new OpenApiSecurityScheme
             {
-                Type = ReferenceType.SecurityScheme,
-                Id = "Bearer"
-            }
-        },
-        Array.Empty<string>()
-    }
-}))
-);
+                Reference = new OpenApiReference
+                {
+                    Type = ReferenceType.SecurityScheme,
+                    Id = "Bearer"
+                }
+            },
+            Array.Empty<string>()
+        }
+    });
+});
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IJwtService, JwtService>();
+builder.Services.AddScoped<ITagRepository, TagRepository>();
 
 var app = builder.Build();
 
@@ -113,9 +118,8 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseAuthentication();
+app.UseAuthorization();
 app.MapControllers();
-
-
 
 
 app.Run();

@@ -16,7 +16,7 @@ public class LogoutUserCommandHandler : IRequestHandler<LogoutUserCommand, Resul
 
     public async Task<Result<bool>> Handle(LogoutUserCommand request, CancellationToken cancellationToken)
     {
-        await _repository.LogoutAsync(request.userId);
+        await _repository.LogoutAsync(request.userId, cancellationToken);
         return Result<bool>.Success(true);
     }
 }

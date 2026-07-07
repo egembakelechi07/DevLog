@@ -30,7 +30,7 @@ public class LoginUserCommandHandler : IRequestHandler<LoginUserCommand, Result<
 
         var normalizedEmail = request.email.Trim().ToLower();
 
-        var user = await _repository.GetByEmailAsync(normalizedEmail);
+        var user = await _repository.GetByEmailAsync(normalizedEmail, cancellationToken);
 
         if(user == null)
         return Result<LoginDto>.Fail("Invalid Email or Passowrd");
@@ -49,7 +49,7 @@ public class LoginUserCommandHandler : IRequestHandler<LoginUserCommand, Result<
             AccessToken = token,
             TokenType = "Bearer",
             ExpiresIn = 3600,
-            RefreshToken = refreshtoken,
+            RefreshToken = null,
             User = new UserDto
             {
                 Id = user.Id,

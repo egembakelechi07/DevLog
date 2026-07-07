@@ -37,7 +37,7 @@ public class RegisterUserCommandHandler : IRequestHandler<RegisterUserCommand, R
         if(!IsValidPassword(request.Password))
         errors.Add("Password must be at least 8 characters and contain at least one number and special character");
 
-        var exists = await _repository.ExistsAsync(request.Email);
+        var exists = await _repository.ExistsAsync(request.Email, cancellationToken);
         if (exists)
         errors.Add("User With this email already exists");
 
@@ -51,7 +51,7 @@ public class RegisterUserCommandHandler : IRequestHandler<RegisterUserCommand, R
             PasswordHash = request.Password
         };
 
-        var created = await _repository.CreateAsync(user);
+        var created = await _repository.CreateAsync(user, cancellationToken);
 
         return Result<UserDto>.Success(new UserDto
         {
@@ -59,7 +59,6 @@ public class RegisterUserCommandHandler : IRequestHandler<RegisterUserCommand, R
             Name = created.Name,
             Email = created.Email,
             CreatedAt = created.CreatedAt,
-            LastUpdatedAt = created.LastUpdatedAt
         }); 
     }
 

@@ -22,7 +22,6 @@ public class JwtService : IJwtService
     public string GenerateToken(Guid userId, string name, string email)
     {
         //get Jwt from appsettings.json
-
         var secret = _config["Jwt:Secret"];
         var issuer = _config["Jwt:Issuer"];
         var audience = _config["Jwt:Audience"];

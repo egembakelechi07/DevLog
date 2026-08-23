@@ -6,12 +6,11 @@ public sealed class Log
     public string Title {get; set;} = string.Empty;
     public string Description {get; set;} = string.Empty;
     public Category Category {get; set;}
-    public Status Status {get; set;} = Status.Pending;
     public Guid UserId {get; set;}
     public User User {get; set;} = null! ;
     public ICollection<LogTags> LogTags { get; set; } = new List<LogTags>();
     public DateTime CreatedAt {get; set;} = DateTime.UtcNow;
-    public DateTime LastUpdatedAt {get; set;} = DateTime.UtcNow;
+    public DateTime? LastUpdatedAt {get; set;} = DateTime.UtcNow;
 }
 
 public enum Category
@@ -24,10 +23,10 @@ public enum Category
     Documentation = 6
 }
 
-public enum Status
-{
-    Pending = 1,
-    Draft = 2,
-    Completed = 3
-}
+// public enum Status
+// {
+//     Pending = 1,
+//     Draft = 2,
+//     Completed = 3
+// }
 

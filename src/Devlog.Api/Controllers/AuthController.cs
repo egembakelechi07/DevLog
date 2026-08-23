@@ -1,19 +1,19 @@
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using DevLog.Application.Features.Users.Commands.RegisterUser;
-using DevLog.Application.Features.Users.Commands.LoginUser;
+using DevLog.Application.Features.Auth.Commands.RegisterUser;
+using DevLog.Application.Features.Auth.Commands.LoginUser;
 using DevLog.Shared.Responses;
 using DevLog.Application.DTOs;
-using DevLog.Application.Features.Users.Commands.LogoutUser;
-using Microsoft.AspNetCore.Mvc.ApplicationParts;
+using DevLog.Application.Features.Auth.Commands.LogoutUser;
+using DevLog.Application.Features.Auth.Queries.GetUserInfo;
 using System.Security.Claims;
-using DevLog.Domain.Entities;
 using Microsoft.AspNetCore.Authorization;
 
 namespace Devlog.Api.Controllers;
 
+
 [ApiController]
-[Route("api/v1/Auth")]
+[Route("api/v1/auth")]
 public class AuthController : ControllerBase
 {
     private readonly IMediator _mediator;
@@ -25,7 +25,7 @@ public class AuthController : ControllerBase
 
     // POST /api/v1/Auth/register
     [HttpPost("register")]
-    public async Task<IActionResult> Register([FromBody] RegisterUserCommand command, CancellationToken cancellationToken)
+    public async Task<IActionResult> Register([FromBody] RegisterUserCommand command, CancellationToken cancellationToken = default)
     {
         var result = await _mediator.Send(command, cancellationToken);
 
@@ -37,7 +37,7 @@ public class AuthController : ControllerBase
 
     // POST /api/v1/Auth/login
     [HttpPost("login")]
-    public async Task<IActionResult> Login([FromBody] LoginUserCommand command, CancellationToken cancellationToken)
+    public async Task<IActionResult> Login([FromBody] LoginUserCommand command, CancellationToken cancellationToken = default)
     {
         var result = await _mediator.Send(command, cancellationToken);
 
@@ -51,7 +51,7 @@ public class AuthController : ControllerBase
 
     [HttpPost("logout")]
     [Authorize]
-    public async Task<IActionResult> Logout(CancellationToken cancellationToken)
+    public async Task<IActionResult> Logout(CancellationToken cancellationToken = default)
     {
         var userIdClaim = User.FindFirst(ClaimTypes.NameIdentifier);
 
@@ -65,7 +65,7 @@ public class AuthController : ControllerBase
 
     [HttpGet("me")]
     [Authorize]
-    public async Task<IActionResult> GetUserInfo(CancellationToken cancellationToken)
+    public async Task<IActionResult> GetUserInfo(CancellationToken cancellationToken = default)
     {
         var userIdClaim = User.FindFirst(ClaimTypes.NameIdentifier);
         if(userIdClaim == null)

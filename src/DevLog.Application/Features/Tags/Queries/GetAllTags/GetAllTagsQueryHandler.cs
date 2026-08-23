@@ -18,16 +18,10 @@ public class GetAllTagsQueryHandler : IRequestHandler<GetAllTagsQuery, Result<Pa
 
     public async Task<Result<PaginatedResponse<TagDto>>> Handle(GetAllTagsQuery request , CancellationToken cancellationToken)
     {
-        var errors = new List<string>();
 
-        if (request.Page < 1)
-        errors.Add("Page number must be greater than 0.");
+        if (request.Page < 1 || request.PageSize < 1 || request.PageSize > 50)
+        return Result<PaginatedResponse<TagDto>>.Fail("Invalid Pagination Parameters");
 
-        if (request.PageSize < 1 || request.PageSize > 50)
-        errors.Add("Page size must be between 1 and 50.");
-
-        if(errors.Any())
-        return Result<PaginatedResponse<TagDto>>.Fail(errors);
 
         var (tags,totalcount) = await _repository.GetAllAsync(request.Page, request.PageSize, cancellationToken);
 

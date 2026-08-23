@@ -23,9 +23,9 @@ public class LogConfiguration : IEntityTypeConfiguration<Log>
                .IsRequired()
                .HasConversion<string>();
 
-        builder.Property(l => l.Status)
-               .IsRequired()
-               .HasConversion<string>();
+       //  builder.Property(l => l.Status)
+       //         .IsRequired()
+       //         .HasConversion<string>();
 
         builder.Property(l => l.UserId)
                .IsRequired();
@@ -46,7 +46,7 @@ public class LogConfiguration : IEntityTypeConfiguration<Log>
 
         builder.HasIndex(l => l.Category);
 
-        builder.HasIndex(l => l.Status);
+       //  builder.HasIndex(l => l.Status);
 
         builder.HasIndex(l => l.CreatedAt);
 

@@ -43,10 +43,6 @@ namespace DevLog.Infrastructure.Migrations
                     b.Property<DateTime>("LastUpdatedAt")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<string>("Status")
-                        .IsRequired()
-                        .HasColumnType("text");
-
                     b.Property<string>("Title")
                         .IsRequired()
                         .HasMaxLength(200)
@@ -60,8 +56,6 @@ namespace DevLog.Infrastructure.Migrations
                     b.HasIndex("Category");
 
                     b.HasIndex("CreatedAt");
-
-                    b.HasIndex("Status");
 
                     b.HasIndex("UserId");
 
@@ -103,6 +97,9 @@ namespace DevLog.Infrastructure.Migrations
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("character varying(50)");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("timestamp with time zone");
 
                     b.HasKey("Id");
 

@@ -21,7 +21,7 @@ public class TagController : ControllerBase
     }
 
     [HttpPost]
-    public async Task<IActionResult> CreateTag([FromBody] CreateTagCommand command, CancellationToken cancellationToken)
+    public async Task<IActionResult> CreateTag([FromBody] CreateTagCommand command, CancellationToken cancellationToken = default)
     {
         var result = await _mediator.Send(command, cancellationToken);
 
@@ -32,7 +32,7 @@ public class TagController : ControllerBase
     }
 
     [HttpPut]
-    public async Task<IActionResult> UpdateTag( Guid Id, [FromBody] UpdateTagDto dto, CancellationToken cancellationToken)
+    public async Task<IActionResult> UpdateTag( Guid Id, [FromBody] UpdateTagDto dto, CancellationToken cancellationToken = default)
     {
         var result = await _mediator.Send( new UpdateTagCommand(Id, dto.Name, dto.Description), cancellationToken);
         if(!result.IsSuccess)
@@ -42,7 +42,7 @@ public class TagController : ControllerBase
     }
 
     [HttpGet ("{Id}")]
-    public async Task<IActionResult> GetSingleTag(Guid Id, CancellationToken cancellationToken)
+    public async Task<IActionResult> GetSingleTag(Guid Id, CancellationToken cancellationToken = default)
     {
         var result = await _mediator.Send( new GetSingleTagQuery(Id), cancellationToken);
         
@@ -55,7 +55,7 @@ public class TagController : ControllerBase
     [HttpGet]
     public async Task<IActionResult> GetAll([FromQuery] int page = 1, [FromQuery] int PageSize = 50, CancellationToken cancellationToken = default)
     {
-        var result = await _mediator.Send(new GetAllTagsQuery(page, PageSize));
+        var result = await _mediator.Send(new GetAllTagsQuery(page, PageSize), cancellationToken);
 
         if(!result.IsSuccess)
         return BadRequest(ApiResponse<PaginatedResponse<TagDto>>.Failure("Failed to retrieve tags", result.Errors));

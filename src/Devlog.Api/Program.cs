@@ -6,14 +6,26 @@ using DevLog.Infrastructure.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using DevLog.Application.Features.Auth.Commands.RegisterUser;
 using Microsoft.OpenApi.Models;
+using Serilog;
+using Serilog.Events;
+using DevLog.Api.Middleware;
 
+//configure logger 
+Log.Logger = new LoggerConfiguration()
+    .MinimumLevel.Information()
+    .WriteTo.Console()
+    .WriteTo.File("logs/DevLog-.log", rollingInterval : RollingInterval.Day)
+    .CreateLogger();
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Read the connection string from appsettings.json
 // "DefaultConnection" must match the key in appsettings.json exactly
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+
+builder.Host.UseSerilog();
 // Add services to the container.
 builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseNpgsql(connectionString));
 builder.Services.AddMediatR(cfg => 
@@ -24,6 +36,7 @@ builder.Services.AddMediatR(cfg =>
 //2. Token Validation Parameters
 builder.Services.AddAuthentication(options =>
 {
+    // set jwt as default authentication scheme
     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
     options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
 }).AddJwtBearer(options =>
@@ -45,10 +58,11 @@ builder.Services.AddAuthentication(options =>
         ValidateIssuerSigningKey = true,
         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Secret"]!)),
 
-        //No Clock Skew basicasllyu means token expires exactly when it is supposed to expire
+        //No Clock Skew basically means token expires exactly when it is supposed to expire
         ClockSkew = TimeSpan.Zero
     };
 });
+
 builder.Services.AddAuthorization();
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
@@ -106,6 +120,7 @@ builder.Services.AddSwaggerGen(c =>
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IJwtService, JwtService>();
 builder.Services.AddScoped<ITagRepository, TagRepository>();
+builder.Services.AddScoped<ILogRepository, LogRepository>();
 
 var app = builder.Build();
 
@@ -115,7 +130,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
+app.UseMiddleware<GlobalExceptionHandler>();
 app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();

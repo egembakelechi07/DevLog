@@ -2,7 +2,6 @@ using DevLog.Domain.Interfaces;
 using DevLog.Infrastructure.Data;
 using DevLog.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
-using System.Formats.Asn1;
 
 namespace DevLog.Infrastructure.Repositories;
 
@@ -22,8 +21,9 @@ public class TagRepository : ITagRepository
 
     public async Task<Tag> CreateAsync(Tag tag, CancellationToken cancellationToken)
     {
-        await _context.Tags.AddAsync(tag);
-        await _context.SaveChangesAsync();
+        tag.CreatedAt = DateTime.UtcNow;
+        await _context.Tags.AddAsync(tag, cancellationToken);
+        await _context.SaveChangesAsync(cancellationToken);
         return tag;
     }
 
@@ -32,9 +32,13 @@ public class TagRepository : ITagRepository
         return await _context.Tags.FirstOrDefaultAsync(t => t.Id == Id, cancellationToken);
     }
 
+    public async Task<List<Tag>> GetByIdsAsync(List<Guid> tagIds, CancellationToken cancellationToken)
+    {
+        return await _context.Tags.Where( t => tagIds.Contains(t.Id)).ToListAsync(cancellationToken);
+    }
+
     public async Task<Tag> UpdateAsync(Tag tag, CancellationToken cancellationToken)
     {
-        tag.UpdatedAt = DateTime.UtcNow;
         _context.Tags.Update(tag);
         await _context.SaveChangesAsync(cancellationToken);
         return tag;
@@ -51,6 +55,6 @@ public class TagRepository : ITagRepository
         .Take(PageSize) //only return current page
         .ToListAsync();
 
-        return (Tags, TotalCount) ;
+        return (Tags, TotalCount);
     }
 }    

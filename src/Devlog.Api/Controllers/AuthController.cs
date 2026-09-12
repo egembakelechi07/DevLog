@@ -8,6 +8,7 @@ using DevLog.Application.Features.Auth.Commands.LogoutUser;
 using DevLog.Application.Features.Auth.Queries.GetUserInfo;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.RateLimiting;
 
 namespace Devlog.Api.Controllers;
 
@@ -37,6 +38,7 @@ public class AuthController : ControllerBase
 
     // POST /api/v1/Auth/login
     [HttpPost("login")]
+    [EnableRateLimiting("login")]
     public async Task<IActionResult> Login([FromBody] LoginUserCommand command, CancellationToken cancellationToken = default)
     {
         var result = await _mediator.Send(command, cancellationToken);

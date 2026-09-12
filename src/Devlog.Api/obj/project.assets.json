@@ -2922,9 +2922,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\egemb\\DevLog\\src\\DevLog.Api\\Devlog.Api.csproj",
-      "projectName": "Devlog.Api",
-      "projectPath": "C:\\Users\\egemb\\DevLog\\src\\DevLog.Api\\Devlog.Api.csproj",
+      "projectUniqueName": "C:\\Users\\egemb\\DevLog\\src\\DevLog.Api\\DevLog.Api.csproj",
+      "projectName": "DevLog.Api",
+      "projectPath": "C:\\Users\\egemb\\DevLog\\src\\DevLog.Api\\DevLog.Api.csproj",
       "packagesPath": "C:\\Users\\egemb\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\egemb\\DevLog\\src\\DevLog.Api\\obj\\",
       "projectStyle": "PackageReference",
@@ -3036,5 +3036,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1900",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Error occurred while getting package vulnerability data: Unable to load the service index for source https://api.nuget.org/v3/index.json."
+    }
+  ]
 }

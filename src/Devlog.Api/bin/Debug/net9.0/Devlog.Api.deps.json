@@ -6,7 +6,7 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v9.0": {
-      "DevLog.Api/1.0.0": {
+      "Devlog.Api/1.0.0": {
         "dependencies": {
           "DevLog.Application": "1.0.0",
           "DevLog.Domain": "1.0.0",
@@ -19,7 +19,7 @@
           "Swashbuckle.AspNetCore": "6.9.0"
         },
         "runtime": {
-          "DevLog.Api.dll": {}
+          "Devlog.Api.dll": {}
         }
       },
       "BCrypt.Net-Next/4.2.0": {
@@ -727,7 +727,7 @@
     }
   },
   "libraries": {
-    "DevLog.Api/1.0.0": {
+    "Devlog.Api/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

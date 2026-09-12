@@ -9,8 +9,12 @@ using System.Text;
 using DevLog.Application.Features.Auth.Commands.RegisterUser;
 using Microsoft.OpenApi.Models;
 using Serilog;
-using Serilog.Events;
 using DevLog.Api.Middleware;
+using Microsoft.AspNetCore.RateLimiting;
+using System.Threading.RateLimiting;
+using DevLog.Shared.Responses;
+using System.Reflection.Metadata;
+using System.Text.Json;
 
 //configure logger 
 Log.Logger = new LoggerConfiguration()
@@ -31,6 +35,29 @@ builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseNpgsql
 builder.Services.AddMediatR(cfg => 
     cfg.RegisterServicesFromAssembly(
         typeof(RegisterUserCommandHandler).Assembly));
+
+builder.Services.AddRateLimiter(options =>
+{
+    //Configure limitedWindow RateLimiter
+    options.AddFixedWindowLimiter("login", limiterOptions =>
+    {
+        limiterOptions.PermitLimit = 5;
+        limiterOptions.Window = TimeSpan.FromMinutes(15);
+        limiterOptions.QueueProcessingOrder = QueueProcessingOrder.OldestFirst;
+        limiterOptions.QueueLimit = 0;
+    });
+    options.OnRejected = async (context , cancellationToken) =>
+    {
+        context.HttpContext.Response.StatusCode = 429;
+        context.HttpContext.Response.ContentType = "application/json";
+
+        //Build Response
+        var response = ApiResponse<object>. Failure("Too many requests, Try again later", 
+        new List<string>{ "Too many requests, Try again later" });
+
+        await context.HttpContext.Response.WriteAsync(JsonSerializer.Serialize(response), cancellationToken);
+    };
+});
 //Register jwt in program.cs 
 //1. setting the default scheme(first block)
 //2. Token Validation Parameters
@@ -132,6 +159,7 @@ if (app.Environment.IsDevelopment())
 }
 app.UseMiddleware<GlobalExceptionHandler>();
 app.UseHttpsRedirection();
+app.UseRateLimiter();
 app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();

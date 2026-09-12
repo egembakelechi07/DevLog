@@ -1,4 +1,5 @@
 using DevLog.Application.DTOs;
+using DevLog.Domain.Entities;
 using DevLog.Domain.Interfaces;
 using DevLog.Shared;
 using MediatR;
@@ -44,11 +45,16 @@ public class LoginUserCommandHandler : IRequestHandler<LoginUserCommand, Result<
         if(user == null)
         {
             _logger.LogWarning("Login failed - user not found: {Email}", request.email);
-            return Result<LoginDto>.Fail("Invalid Email or Passowrd");
+            return Result<LoginDto>.Fail("Invalid Email or Password");
         }
         
 
         bool isValidPassword = _repository.IsValidPassword(request.password, user.PasswordHash);
+        if(isValidPassword == false)
+        {
+            _logger.LogWarning("login Failed - Invalid password for user :{Email}", request.email);
+            return Result<LoginDto>.Fail("Invalid Email or password");
+        }
 
         //Generate access Token
         var token = _jwtService.GenerateToken(user.Id, user.Name, user.Email);
